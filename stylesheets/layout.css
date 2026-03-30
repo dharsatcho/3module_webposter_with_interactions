@@ -9,7 +9,7 @@ body {
 h1 {
     font-family: "Proxima-Nova";
     font-weight: 800;
-    font-size: 5vw;
+    font-size: 4.68vw;
     line-height: 98%;
     color: #C3FB4F;
     text-align: left;
@@ -20,20 +20,22 @@ h1 {
 }
 
 .first_section {
+    position: relative;
+    height: 44vw;
     overflow: hidden;
 }
 
 .first_section_second_sost {
+    position: relative;
     z-index: 3;
 }
 
-/* .first_section > .first_section_decor,
 .first_section > div:last-child {
     position: absolute;
     inset: 0;
     z-index: 1;
     pointer-events: none;
-} */
+}
 
 /* .game_stop {
     height: 48.6vw;
@@ -186,11 +188,18 @@ h1 {
 } */
 
 
-.first_section > .first_section_decor > .first_section_title,
+.first_section > div:last-child > img:first-child {
+    position: absolute;
+    inset: auto 0 0 0;
+    width: 100%;
+    z-index: 1;
+}
+
 .first_section > div:last-child > img:last-child {
     position: absolute;
     top: 0;
     left: 50%;
+    width: 100%;
     transform: translateX(-50%);
     z-index: 2;
 }
@@ -198,7 +207,8 @@ h1 {
 .first_section_second_sost > img {
     position: absolute;
     top: 0;
-    left: 1637px;
+    left: 85vw;
+    width: 117%;
     z-index: 3;
 }
 
@@ -209,6 +219,7 @@ h1 {
     left: 92vw;
     z-index: 4;
     background: transparent;
+    transition: left 0.5s ease-in-out;
 }
 
 .first_section_overlay_button img {
@@ -216,7 +227,9 @@ h1 {
 }
 .moving-image {
     position: absolute;
-    left: 1637px;
+    left: 100vw;
+    top: 0;
+    width: 100%;
     transition: left 0.5s ease-in-out;
     z-index: 3;
 }
@@ -224,7 +237,7 @@ h1 {
     left: -17vw;
 }
 .first_section_overlay_button.moved {
-    left: -17vw;
+    left: -14.74vw;
 }
 
 .create_character {
@@ -405,6 +418,7 @@ h1 {
 
 
 .popup_create_char .popup-content h1 {
+    left: 17vw;
     position: absolute;
     text-align: center;
     margin: 1vw 0;
@@ -528,7 +542,7 @@ h3 {
     margin: 0 auto;
 }
 
-/* Каждая карточка */
+
 .phrase-card {
     /* position: relative; */
     width: 35vw;
@@ -596,12 +610,12 @@ h3 {
     transform: scale(1.1);
 } */
 
-/* Основная картинка фразы */
+
 .main-phrase {
     /* width: 100%; */
 }
 
-/* Облако друга (изначально скрыто) */
+
 .friend-cloud {
     position: absolute;
     top: -30%;
@@ -639,11 +653,9 @@ h3 {
     pointer-events: auto;
 }
 
-/* Пятый триггерный блок – выделим */
 .trigger-card {
 }
 
-/* Попап победы – аналогичный прошлому */
 .popup_searching_a_friend {
     position: fixed;
     top: 0;
@@ -836,93 +848,6 @@ h3 {
     z-index: 1;
 }
 
-/* @media (max-width: 768px) {
-    .game_stop {
-        min-height: auto;
-    }
-
-    .game_stop_inner {
-        min-height: auto;
-        padding: 10vw 6vw 16vw;
-    }
-
-    .stop_sign,
-    .traffic_lighter {
-        position: relative;
-        top: auto;
-        left: auto;
-        right: auto;
-        width: 100%;
-    }
-
-    .stop_sign {
-        max-width: 88vw;
-        margin: 0 auto 10vw;
-    }
-
-    .stop_sign_title {
-        top: 21vw;
-        font-size: 10vw;
-    }
-
-    .traffic_lighter {
-        margin: 0 auto;
-    }
-
-    .traffic_light_bulb {
-        width: 17vw;
-        height: 17vw;
-        border-width: 0.7vw;
-    }
-
-    .decor_game_stop {
-        position: relative;
-        display: block;
-        width: 48vw;
-        right: auto;
-        bottom: auto;
-        margin: 10vw 0 0 auto;
-    }
-} */
-
-/* Адаптивность для мобильных устройств
-@media (max-width: 768px) {
-    .slider-option button {
-        width: 6vw;
-        height: 6vw;
-        font-size: 4vw;
-    }
-
-    .slider-img {
-        width: 12vw;
-        height: 12vw;
-    }
-
-    .main-character-img {
-        width: 40vw;
-        height: 40vw;
-    }
-
-    .again_button_create_char,
-    .win_button_create_char {
-        font-size: 3vw;
-        padding: 2vw 4vw;
-    }
-
-    .popup-content {
-        width: 80vw;
-        padding: 5vw;
-    }
-
-    .popup-content p {
-        font-size: 3vw;
-    }
-
-    .start-again-btn {
-        font-size: 2.5vw;
-        padding: 2vw 4vw;
-    }
-} */
 
 .create_drink {
     position: relative;
@@ -1075,34 +1000,54 @@ h3 {
 
 .drink_options_area {
     position: absolute;
-    top: 8.6vw;
-    right: 3.4vw;
+    top: 8vw;
+    right: 3.5vw;
     width: 27vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2.8vw;
     z-index: 2;
 }
 
 .options_of_drink_base {
     position: relative;
     width: 100%;
-    padding-bottom: 2.2vw;
+    height: 9.6vw;
+    padding-bottom: 0;
 }
 
 .options_of_drink_base--second {
-    margin-top: 2vw;
+    margin-top: 0;
 }
 
-.options_of_drink_base--first img:nth-of-type(1) {
-    margin-top: 8vw;
+.base_1_for_drink {
+    margin-top: 9vw;
+    margin-left: -2vw;
+}
+
+.base_2_for_drink{
+    margin-top: 9vw;
     margin-left: 11vw;
 }
 
-.options_of_drink_base--first img:nth-of-type(2){
-    /* margin-top: 8vw; */
-    margin-left: 8vw;
+.decor_1_for_drink {
+    margin-top: -13vw;
+    margin-left: 5vw;
 }
 
-.options_of_drink_base--second img:nth-of-type(1) {
+.rack_base_drink_1 {
+    margin-top: 4vw;
+    margin-left: -5vw;
+}
 
+.decor_2_for_drink {
+    margin-top: -13vw;
+    margin-left: 18vw;
+}
+
+.rack_base_drink_2 {
+    margin-top: 3vw;
+    margin-left: 4vw;
 }
 
 .drink_option {
@@ -1126,16 +1071,27 @@ h3 {
 
 .options_of_drink_base--first .drink_option:first-child,
 .options_of_drink_base--second .drink_option:first-child {
-    margin-left: 4.4vw;
+    left: 4.2vw;
+    top: 0.3vw;
+    margin: 0;
 }
 
 .options_of_drink_base--first .drink_option:last-child,
 .options_of_drink_base--second .drink_option:last-child {
-    margin-left: 13.9vw;
-    margin-top: -6.2vw;
+    left: 14vw;
+    top: 0.1vw;
+    margin: 0;
 }
 
-.drink_option img,
+.options_of_drink_base--first .drink_option {
+    z-index: 3;
+}
+
+.options_of_drink_base--second .drink_option {
+    z-index: 1;
+}
+
+
 .rack_base_drink {
     display: block;
     width: 26.2vw;
@@ -1144,28 +1100,48 @@ h3 {
 
 .rack_base_drink {
     position: absolute;
-        top: 19vw;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    left: 0.8vw;
+    top: 3.6vw;
     z-index: 1;
 }
 
+.options_of_drink_base--first .drink_option img,
+.options_of_drink_base--second .drink_option img {
+    display: block;
+    width: 7.9vw;
+    height: auto;
+}
+
 .drag_sign {
+    margin-top: 22vw;
+    margin-right: -2vw;
+    position: absolute;
+    align-self: flex-end;
     display: block;
     width: 5.6vw;
-    margin: 0.7vw 1vw 0 auto;
 }
 
 .create_drink_actions {
     position: absolute;
-    left: 35.2vw;
+    right: 3.5vw;
     bottom: 2vw;
     display: flex;
     gap: 1vw;
     align-items: center;
     z-index: 4;
     transform: none;
+}
+
+.again_button_create_drink {
+    position: absolute;
+    margin-top: -4vw;
+    margin-left: -13vw;
+}
+
+.done_button_create_drink {
+    position: absolute;
+    margin-top: -2.4vw;
+    margin-left: -6vw;
 }
 
 .again_button_create_drink,
@@ -1343,7 +1319,7 @@ h3 {
 
 .victorina {
     position: relative;
-    min-height: 62vw;
+    height: 53.33vw;
     background-color: #312783;
     overflow: hidden;
 }
@@ -1358,11 +1334,17 @@ h3 {
     position: absolute;
     left: 50%;
     top: 15vw;
-    width: 20vw;
-    height: 20vw;
+    width: 26.3vw;
     object-fit: contain;
     transform: translateX(-50%);
+    transition: left 0.45s ease, transform 0.45s ease;
     z-index: 2;
+}
+
+.victorina.is-started .victorina_main_character,
+.victorina.is-finished .victorina_main_character {
+    left: 17vw;
+    transform: translateX(0);
 }
 
 .victorina_card {
@@ -1376,10 +1358,28 @@ h3 {
 
 .victorina_card_cloud {
     display: block;
-    width: 100%;
+    width: 18.86vw;
     height: auto;
     transform-origin: center center;
     transition: transform 0.45s ease, opacity 0.35s ease;
+}
+
+.cloud_questionmark_4 {
+    margin-left: -8vw;
+}
+
+.cloud_questionmark_1 {
+    margin-top: -4vw;
+    margin-left: 6vw;
+}
+
+.cloud_questionmark_2 {
+    margin-bottom: -6vw;
+        margin-left: 7vw;
+}
+
+.cloud_questionmark_3 {
+    margin-left: -8vw;
 }
 
 .victorina_card_plaque {
@@ -1395,7 +1395,7 @@ h3 {
 
 .victorina_card_plaque_image {
     display: block;
-    width: 100%;
+    width: 44.21vw;
     height: auto;
 }
 
@@ -1473,29 +1473,29 @@ h3 {
 
 .victorina.is-started .victorina_card_answer_top,
 .victorina.is-finished .victorina_card_answer_top {
-    left: 53vw;
-    top: 10vw;
+    left: 58vw;
+    top: 18vw;
     width: 26vw;
 }
 
 .victorina.is-started .victorina_card_answer_middle,
 .victorina.is-finished .victorina_card_answer_middle {
-    left: 53vw;
-    top: 22vw;
+    left: 58vw;
+    top: 30vw;
     width: 26vw;
 }
 
 .victorina.is-started .victorina_card_answer_bottom,
 .victorina.is-finished .victorina_card_answer_bottom {
-    left: 53vw;
-    top: 34vw;
+    left: 58vw;
+    top: 42vw;
     width: 26vw;
 }
 
 .victorina.is-started .victorina_card_question,
 .victorina.is-finished .victorina_card_question {
-    top: 8vw;
-    left: 6vw;
+    top: 6vw;
+    left: 58vw;
     right: auto;
     width: 32vw;
 }
@@ -1598,7 +1598,30 @@ h3 {
     }
 }
 
-@media (max-width: 768px) {
+.scale_phrase21 {
+    background-color: #312783;
+    width: auto;
+    /* height: 32vw; */
+}
+
+.scale_phrase_2 div {
+    background-color: #312783;
+    display: flex;
+    gap: 0.5vw;
+    flex-direction: row;
+}
+
+.scale_phrase_2 img:nth-of-type(7) {
+    margin-left: 3vw;
+}
+
+.scale_phrase_2 img:nth-of-type(9) {
+    margin-top: 4vw;
+    margin-left: 3vw;
+}
+
+
+/* @media (max-width: 768px) {
     .victorina {
         min-height: auto;
     }
@@ -1661,4 +1684,4 @@ h3 {
         right: 3vw;
         top: 1vw;
     }
-}
+} */
