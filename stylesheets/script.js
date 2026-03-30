@@ -744,14 +744,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function showResultPopup() {
-        const scoreText = `?????????? ???????: ${state.correctAnswers} ?? 3`;
+        const scoreText = `ПРАВИЛЬНЫХ ОТВЕТОВ: ${state.correctAnswers} ИЗ 3`;
         popup.classList.add('active');
 
         if (state.correctAnswers === 3) {
-            popupTitle.textContent = '?????, ??????? ????????!';
+            popupTitle.textContent = 'ОБЩЕНИЕ ПРОЙДЕНО!';
             popupScore.textContent = scoreText;
         } else {
-            popupTitle.textContent = '?? ?? ?????? ????????';
+            popupTitle.textContent = 'ТЫ НЕ УМЕЕШЬ ОБЩАТЬСЯ';
             popupScore.textContent = scoreText;
         }
     }

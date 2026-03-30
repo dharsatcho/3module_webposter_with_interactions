@@ -1574,6 +1574,14 @@ h3 {
     margin-left: 22vw;
 }
 
+.close_popup_button_create_drink_victory img {
+    background: transparent;
+    border: none;
+    position: absolute;
+    margin-top: -18vw;
+    margin-left: 22vw;
+}
+
 @keyframes victorina-sway {
     0%,
     100% {
