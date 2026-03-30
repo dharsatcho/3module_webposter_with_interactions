@@ -268,6 +268,7 @@ h1 {
 }
 
 .decor_clouds_create_char {
+    width: 106.45vw;
     scale: 1.4;
     position: absolute;
     top: 5vw;
@@ -349,11 +350,13 @@ h1 {
 
 .again_button_create_char {
     right: 12vw;
+    width: 6.14vw;
 }
 
 .win_button_create_char {
     right: 5vw;
     top: 46.3vw;
+    width: 6.14vw;
 }
 
 .again_button_create_char:hover,
@@ -479,6 +482,7 @@ h3 {
 }
 
 .slider_bg {
+    width: 24.48vw;
     z-index: -1;
     scale: 1.15;
     position: absolute;
@@ -718,13 +722,13 @@ h3 {
 
 .popup_searching_a_friend .button_start_again_searching_a_friend {
     gap: 1vw;
-    margin-top: 12.5vw;
+    margin-top: 10.5vw;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     background: transparent;
-    margin-left: 0;
+    margin-left: 5vw;
 }
 
 .popup_searching_a_friend .again_popup_button_searching_a_friend {
@@ -1560,6 +1564,14 @@ h3 {
     left: 51vw;
     top: -0.5vw;
     position: absolute;
+}
+
+.close_popup_button_create_drink_victory {
+    background: transparent;
+    border: none;
+        position: absolute;
+    margin-top: -18vw;
+    margin-left: 22vw;
 }
 
 @keyframes victorina-sway {
