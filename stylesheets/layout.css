@@ -3,5 +3,1662 @@
 }
 
 body {
+    background-color: #312783;
+    overflow-x: hidden
+}
+h1 {
+    font-family: "Proxima-Nova";
+    font-weight: 800;
+    font-size: 5vw;
+    line-height: 98%;
+    color: #C3FB4F;
+    text-align: left;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.first_section {
+    overflow: hidden;
+}
+
+.first_section_second_sost {
+    z-index: 3;
+}
+
+/* .first_section > .first_section_decor,
+.first_section > div:last-child {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+} */
+
+/* .game_stop {
+    height: 48.6vw;
+    width: 100vw;
+    position: relative;
+    min-height: 62vw;
+    background-color: #312783;
+    overflow: hidden;
+}
+
+.game_stop_inner {
+    position: relative;
+    width: 100%;
+    min-height: 62vw;
+    padding: 8vw 5vw 6vw;
+}
+
+.stop_sign {
+    position: absolute;
+    top: 10vw;
+    left: 5vw;
+    width: 34vw;
+    z-index: 2;
+}
+
+.stop_sign_image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.stop_sign_title {
+    position: absolute;
+    top: 8.2vw;
+    left: 50%;
+    margin: 0;
+    transform: translateX(-50%) scale(0.92);
+    opacity: 0;
+    transition: opacity 0.45s ease, transform 0.45s ease;
+    white-space: nowrap;
+}
+
+.stop_sign_title.is-visible {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+
+.traffic_lighter {
+    position: absolute;
+    top: 9vw;
+    right: 6vw;
+    width: 58vw;
+    z-index: 2;
+}
+
+.traffic_lighter_image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.traffic_light_bulb {
+    position: absolute;
+    top: 50%;
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    border: 0.35vw solid #fff;
+    transform: translate(-50%, -50%);
+    transition: background-color 2s ease, box-shadow 2s ease, opacity 0.3s ease;
+    box-shadow: 0 0 0 rgba(195, 251, 79, 0);
+}
+
+.traffic_light_bulb.is-active {
+    background-color: #C3FB4F;
+    box-shadow: 0 0 2.4vw rgba(195, 251, 79, 0.75);
+}
+
+.traffic_light_bulb_red {
+    left: 15.4%;
+}
+
+.traffic_light_bulb_yellow {
+    left: 36.55%;
+}
+
+.traffic_light_bulb_green {
+    left: 57.75%;
+}
+
+.traffic_light_bulb_extra {
+    left: 80.6%;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.decor_game_stop {
+    position: absolute;
+    z-index: 1;
+} */
+
+/* @media (max-width: 768px) {
+    .game_stop {
+        min-height: auto;
+    }
+
+    .game_stop_inner {
+        min-height: auto;
+        padding: 10vw 6vw 16vw;
+    }
+
+    .stop_sign,
+    .traffic_lighter {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        width: 100%;
+    }
+
+    .stop_sign {
+        max-width: 88vw;
+        margin: 0 auto 10vw;
+    }
+
+    .stop_sign_title {
+        top: 21vw;
+        font-size: 10vw;
+    }
+
+    .traffic_lighter {
+        margin: 0 auto;
+    }
+
+    .traffic_light_bulb {
+        width: 17vw;
+        height: 17vw;
+        border-width: 0.7vw;
+    }
+
+    .decor_game_stop {
+        position: relative;
+        display: block;
+        width: 48vw;
+        right: auto;
+        bottom: auto;
+        margin: 10vw 0 0 auto;
+    }
+} */
+
+
+.first_section > .first_section_decor > .first_section_title,
+.first_section > div:last-child > img:last-child {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.first_section_second_sost > img {
+    position: absolute;
+    top: 0;
+    left: 1637px;
+    z-index: 3;
+}
+
+.first_section_overlay_button {
+    position: absolute;
+    border: none;
+    top: 18vw;
+    left: 92vw;
+    z-index: 4;
+    background: transparent;
+}
+
+.first_section_overlay_button img {
+    display: block;
+}
+.moving-image {
+    position: absolute;
+    left: 1637px;
+    transition: left 0.5s ease-in-out;
+    z-index: 3;
+}
+.moving-image.moved {
+    left: -17vw;
+}
+.first_section_overlay_button.moved {
+    left: -17vw;
+}
+
+.create_character {
+    position: relative;
+    width: 100%;
+    height: 58vw;
+    overflow: hidden;
+    background-color: #312783;
+    isolation: isolate;
+    margin-top: -0.2vw;
+}
+
+
+.character-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+.left_slider {
+    position: absolute;
+    left: 5vw;
+    /* top: 15vw; */
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.decor_clouds_create_char {
+    scale: 1.4;
+    position: absolute;
+    top: 5vw;
+    left: 10vw;
+}
+
+.clouds_decor_main_create_char {
+    position: absolute;
+    top: 31vw;
+    left: 48vw;
+}
+
+.slider-option {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    height: 12vw;
+    width: 50vw;
+    padding-left: 1.5vw;
+    padding-top: 2vw;
+    /* padding: 0.5vw; */
+    /* backdrop-filter: blur(4px); */
+}
+
+.left_slider div:nth-of-type(1) {
+    margin-top: 2vw;
+}
+
+.left_slider h1 {
+    margin-left: -1vw;
+}
+
+.slider-option button {
+    /* width: 3vw;
+    height: 3vw; */
+    scale: 1.2;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.slider-option button:hover {
+    background: #555;
+}
+
+
+.slider-img {
+    width: 16vw;
+    height: 16vw;
+    object-fit: contain;
+}
+
+.main-character-img {
+    position: absolute;
+    left: 55%;
+    top: 15vw;
+    width: 25vw;
+    height: 25vw;
+    object-fit: contain;
+    border-radius: 2vw;
+    z-index: 1;
+}
+
+
+.again_button_create_char,
+.win_button_create_char {
+    position: absolute;
+    top: 45vw;
+    padding: 1vw 2vw;
+    font-size: 1.5vw;
+    background: transparent;
+    border: none;
+    border-radius: 1vw;
+    cursor: pointer;
+    transition: transform 0.2s;
+    z-index: 2;
+}
+
+.again_button_create_char {
+    right: 12vw;
+}
+
+.win_button_create_char {
+    right: 5vw;
+    top: 46.3vw;
+}
+
+.again_button_create_char:hover,
+.win_button_create_char:hover {
+    transform: scale(1.05);
+}
+
+.popup_create_char {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 100;
+}
+
+
+.popup_create_char.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.popup_create_char .popup-content {
+    width: 60vw;
+    max-width: 80vw;
+    text-align: center;
+    position: relative;
+}
+
+
+.close-popup-btn {
+    position: absolute;
+    top: 1vw;
+    right: 1vw;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.close-popup-btn img {
+    width: 2.5vw;
+    height: 2.5vw;
+}
+
+
+.popup_create_char .popup-img {
+    margin: 1vw;
+    object-fit: contain;
+    position: absolute;
+    left: -6vw;
+    top: -11vw;
+    z-index: -1;
+}
+
+
+.popup_create_char .popup-content h1 {
+    position: absolute;
+    text-align: center;
+    margin: 1vw 0;
+    top: 2vw;
+}
+
+h3 {
+    font-weight: 700;
+    line-height: 98%;
+    color: #C3FB4F;
+    font-family: 'Proxima Nova';
+    font-size: 2.4vw;
+}
+
+.popup-content h3 {
+    padding-left: 3vw;
+}
+.again_popup_button_create_char {
+    padding-left: 1vw;
+}
+
+.button_start_again_char {
+    gap: 1w;
+    margin-top: 12.5vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.button_start_again_char h3 {
+    margin-top: 1vw;
+}
+
+.button_start_again_char button:nth-of-type(1) {
+    background: transparent;
+    border: none
+}
+
+.close_popup_button_create_char {
+    left: 51vw;
+    top: -0.5vw;
+    position: absolute;
+    background: transparent;
+    border: none;
+}
+
+.start-again-btn {
+    padding: 1vw 2vw;
+    font-size: 1.2vw;
+    border: none;
+    border-radius: 1vw;
+    cursor: pointer;
+}
+
+.start-again-btn:hover {
+    background: #0b7dda;
+}
+
+.slider_bg {
+    z-index: -1;
+    scale: 1.15;
+    position: absolute;
+    top: 6vw;
+    left: 2vw;
+}
+
+.scale_phrase_1 {
+    background-color: #312783;
+    width: auto;
+    /* height: 32vw; */
+}
+
+.scale_phrase_1 div {
+    background-color: #312783;
+    display: flex;
+    gap: 0.45vw;
+    flex-direction: row;
+}
+.scale_phrase_1 img:nth-of-type(2) {
+    margin-top: 4vw;
+    margin-left: -1vw;
+}
+.scale_phrase_1 img:nth-of-type(4) {
+    padding-left: 2vw;
+}
+.scale_phrase_1 img:nth-of-type(6) {
+    padding-left: 2vw;
+}
+
+.scale_phrase_1 img:nth-of-type(9) {
+    margin-top: -6vw;
+}
+.scale_phrase_1 img:nth-of-type(10) {
+    padding-left: 2vw;
+    margin-top: 4vw;
+}
+.scale_phrase_1 img:nth-of-type(15) {
+    position: absolute;
+    background-color: #312783;
+    left: 59vw;
+    margin-top: -2vw;
+}
+
+
+.searching_a_friend {
+    height: 50.5vw;
+    background-color: #312783;
+}
+.phrase-section {
+    position: relative;
+    width: 100%;
+    /* background: linear-gradient(135deg, #1e3c72, #2a5298); */
+    overflow: hidden;
+    isolation: isolate;
+    padding: 5vw 0;
+}
+
+.phrase-container {
+    gap: 3vw;
+    margin: 0 auto;
+}
+
+/* Каждая карточка */
+.phrase-card {
+    /* position: relative; */
+    width: 35vw;
+    /* height: 30vw; */
+    cursor: pointer;
+    transition: transform 0.2s;
+    text-align: center;
+}
+
+.first_cloud_friend {
+    position: absolute;
+    margin-top: 1vw;
+}
+
+.first_cloud_friend div>img {
+    margin-left: 5vw;
+    margin-top: 5vw;
+}
+
+.second_cloud_friend {
+    position: absolute;
+    left: 8vw;
+    margin-top: 27vw;
+}
+
+.second_cloud_friend div>img {
+    margin-left: 5vw;
+    margin-top: 20vw;
+}
+
+.third_cloud_friend {
+    position: absolute;
+    right: 1vw;
+    margin-top: 4vw;
+}
+
+.third_cloud_friend div>img {
+    margin-left: -23vw;
+    margin-top: 18vw;
+}
+
+.fourth_cloud_friend {
+    position: absolute;
+    right: 10vw;
+    margin-top: 27vw;
+}
+
+.fourth_cloud_friend div > img{
+    margin-left: -35vw;
+    margin-top: 5vw;
+}
+
+.main_cloud_friend {
+    position: absolute;
+    left: 33vw;
+    margin-top: 10vw;
+}
+
+.main_cloud_friend div>img {
+    margin-top: 2vw;
+    margin-left: -13vw;
+}
+
+/* .phrase-card:hover {
+    transform: scale(1.1);
+} */
+
+/* Основная картинка фразы */
+.main-phrase {
+    /* width: 100%; */
+}
+
+/* Облако друга (изначально скрыто) */
+.friend-cloud {
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%); 
+    border-radius: 2vw;
+    padding: 1vw 1.5vw;
+    width: 150%;
+    max-width: 200px;
+    text-align: center;
+    transition: opacity 0.3s;
+    z-index: 10;
+}
+
+.friend-cloud img {
+    /* width: 50px;
+    margin-bottom: 0.5vw; */
+}
+
+.friend-cloud p {
+    font-size: 1rem;
+    margin: 0;
+    color: #333;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* Пятый триггерный блок – выделим */
+.trigger-card {
+}
+
+/* Попап победы – аналогичный прошлому */
+.popup_searching_a_friend {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 100;
+}
+
+.popup_searching_a_friend.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup_searching_a_friend .popup-content {
+    
+    width: 60vw;
+    padding: 2vw;
+    text-align: center;
+    position: relative;
+}
+
+.popup_searching_a_friend .close-popup-btn {
+    position: absolute;
+    top: 1vw;
+    right: 1vw;
+    background: none;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+}
+
+.close_popup_button_searching_a_friend {
+    background: transparent;
+    position: absolute;
+    border: none;
+    margin-left: 20vw;
+    margin-top: -20vw;
+}
+
+
+.popup_searching_a_friend .button_start_again_searching_a_friend {
+    margin-top: 122vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    margin-left: 2vw;
+}
+
+.popup_searching_a_friend .again_popup_button_searching_a_friend {
+    padding: 0.8vw 2vw;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    background: transparent;
+}
+
+.again_popup_button_searching_a_friend img {
+    margin-left: -1.5vw;
+}
+
+.popup_searching_a_friend  h1 {
+    position: absolute;
+    text-align: center;
+    margin: 1vw 0;
+    top: 113vw;
+    left: 13vw;
+}
+
+.popup_searching_a_friend .popup-img {
+    z-index: -1;
+    position: absolute;
+    margin-left: -35vw;
+    margin-top: 100vw;
+    object-fit: contain;
+}
+
+
+.game_stop {
+    position: relative;
+    height: 48vw;
     background-color: #0053FF;
+    overflow: hidden;
+}
+
+.game_stop_inner {
+
+
+    position: relative;
+    width: 100%;
+    min-height: 62vw;
+    padding: 8vw 5vw 6vw;
+}
+
+.stop_sign {
+    position: absolute;
+    top: -0.5vw;
+    left: 34vw;
+    width: 34vw;
+    z-index: 2;
+}
+
+.stop_sign_image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.stop_sign_title {
+    position: absolute;
+    top: 6.2vw;
+    left: 50%;
+    margin: 0;
+    transform: translateX(-50%) scale(0.92);
+    opacity: 0;
+    transition: opacity 0.45s ease, transform 0.45s ease;
+    white-space: nowrap;
+}
+
+.stop_sign_title.is-visible {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+
+.traffic_lighter {
+    position: absolute;
+    top: 18vw;
+    right: -1vw;
+    /* width: 58vw; */
+    z-index: 2;
+}
+
+.traffic_lighter_image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.traffic_light_bulb {
+    position: absolute;
+    top: 50%;
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    border: 0.35vw solid #fff;
+    transform: translate(-50%, -50%);
+    transition: background-color 2s ease, box-shadow 2s ease, opacity 0.3s ease;
+    box-shadow: 0 0 0 rgba(195, 251, 79, 0);
+}
+
+.traffic_light_bulb.is-active {
+    background-color: #C3FB4F;
+    box-shadow: 0 0 2.4vw rgba(195, 251, 79, 0.75);
+}
+
+.traffic_light_bulb_red {
+    left: 15.4%;
+}
+
+.traffic_light_bulb_yellow {
+    left: 36.55%;
+}
+
+.traffic_light_bulb_green {
+    left: 57.75%;
+}
+
+.traffic_light_bulb_extra {
+    left: 80.6%;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.decor_game_stop {
+    top: -0.5vw;
+    left: -0.5vw;
+    width: 100vw;
+    height: 48.6vw;
+    position: absolute;
+    
+    z-index: 1;
+}
+
+/* @media (max-width: 768px) {
+    .game_stop {
+        min-height: auto;
+    }
+
+    .game_stop_inner {
+        min-height: auto;
+        padding: 10vw 6vw 16vw;
+    }
+
+    .stop_sign,
+    .traffic_lighter {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        width: 100%;
+    }
+
+    .stop_sign {
+        max-width: 88vw;
+        margin: 0 auto 10vw;
+    }
+
+    .stop_sign_title {
+        top: 21vw;
+        font-size: 10vw;
+    }
+
+    .traffic_lighter {
+        margin: 0 auto;
+    }
+
+    .traffic_light_bulb {
+        width: 17vw;
+        height: 17vw;
+        border-width: 0.7vw;
+    }
+
+    .decor_game_stop {
+        position: relative;
+        display: block;
+        width: 48vw;
+        right: auto;
+        bottom: auto;
+        margin: 10vw 0 0 auto;
+    }
+} */
+
+/* Адаптивность для мобильных устройств
+@media (max-width: 768px) {
+    .slider-option button {
+        width: 6vw;
+        height: 6vw;
+        font-size: 4vw;
+    }
+
+    .slider-img {
+        width: 12vw;
+        height: 12vw;
+    }
+
+    .main-character-img {
+        width: 40vw;
+        height: 40vw;
+    }
+
+    .again_button_create_char,
+    .win_button_create_char {
+        font-size: 3vw;
+        padding: 2vw 4vw;
+    }
+
+    .popup-content {
+        width: 80vw;
+        padding: 5vw;
+    }
+
+    .popup-content p {
+        font-size: 3vw;
+    }
+
+    .start-again-btn {
+        font-size: 2.5vw;
+        padding: 2vw 4vw;
+    }
+} */
+
+.create_drink {
+    position: relative;
+    min-height: 54vw;
+    background-color: #312783;
+    overflow: hidden;
+}
+
+.create_drink_inner {
+    position: relative;
+    min-height: 54vw;
+    padding: 3vw 4vw 5vw;
+}
+
+.grumpy_cloud {
+    position: absolute;
+    left: 3.6vw;
+    width: 33.7vw;
+    height: auto;
+    top: 12.2vw;
+    z-index: 1;
+}
+
+.create_drink_text {
+    position: absolute;
+    left: 2vw;
+    bottom: 1vw;
+    width: 75.73vw;
+    height: auto;
+    z-index: 3;
+    opacity: 0;
+    transform: scaleX(0.8) translateX(-1vw);
+    transform-origin: left center;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.create_drink_text.is-visible {
+    opacity: 1;
+    transform: scaleX(1) translateX(0);
+}
+
+.create_drink_text_bg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.create_drink_text_value {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+    font-family: "Proxima-Nova";
+    font-weight: 800;
+    line-height: 1;
+    color: #C3FB4F;
+    text-align: center;
+    white-space: nowrap;
+    transform: translateY(0.35vw);
+}
+
+.drink {
+    position: absolute;
+    left: 50%;
+    top: 5vw;
+    width: 24vw;
+    transform: translateX(-46%);
+    z-index: 2;
+}
+
+.empty_glass {
+    position: relative;
+    margin-left: 5vw;
+    margin-top: 3vw;
+    z-index: 2;
+    display: block;
+    height: auto;
+    transition: filter 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+}
+
+.empty_glass.is-previewing {
+    filter: drop-shadow(0 0 1.2vw rgba(195, 251, 79, 0.28));
+}
+
+.empty_glass.is-updating {
+    animation: glass-update 0.35s ease;
+}
+
+.rack {
+    display: block;
+    width: 21vw;
+    height: auto;
+    margin: -9vw 4vw;
+}
+
+.drink_drop_zone {
+    position: absolute;
+    top: 2.9vw;
+    left: 50%;
+    width: 11.1vw;
+    height: 22.7vw;
+    transform: translateX(-50%);
+    border-radius: 0 0 4vw 4vw;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.drink_drop_zone.is-hovered {
+    outline: 0.22vw dashed rgba(195, 251, 79, 0.85);
+    outline-offset: 0.4vw;
+    filter: drop-shadow(0 0 1.1vw rgba(195, 251, 79, 0.45));
+}
+
+.glass_fill_item {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.glass_fill_item.is-entering {
+    animation: drink-item-drop 0.65s cubic-bezier(0.2, 0.9, 0.24, 1.15);
+    transform-origin: center top;
+}
+
+.glass_fill_item.item-base_1 {
+    bottom: -0.1vw;
+    width: 8.9vw;
+}
+
+.glass_fill_item.item-base_2 {
+    bottom: -0.1vw;
+    width: 8.9vw;
+}
+
+.glass_fill_item.item-bake_drink_1 {
+    top: 5.5vw;
+    width: 4.2vw;
+}
+
+.glass_fill_item.item-bake_drink_1_1 {
+    top: 5.2vw;
+    width: 4.3vw;
+}
+
+.drink_options_area {
+    position: absolute;
+    top: 8.6vw;
+    right: 3.4vw;
+    width: 27vw;
+    z-index: 2;
+}
+
+.options_of_drink_base {
+    position: relative;
+    width: 100%;
+    padding-bottom: 2.2vw;
+}
+
+.options_of_drink_base--second {
+    margin-top: 2vw;
+}
+
+.options_of_drink_base--first img:nth-of-type(1) {
+    margin-top: 8vw;
+    margin-left: 11vw;
+}
+
+.options_of_drink_base--first img:nth-of-type(2){
+    /* margin-top: 8vw; */
+    margin-left: 8vw;
+}
+
+.options_of_drink_base--second img:nth-of-type(1) {
+
+}
+
+.drink_option {
+    position: absolute;
+    width: 6.1vw;
+    cursor: grab;
+    transition: transform 0.25s ease, filter 0.25s ease;
+    z-index: 2;
+    user-select: none;
+    touch-action: none;
+}
+
+.drink_option:active {
+    cursor: grabbing;
+}
+
+.drink_option:hover {
+    transform: translateY(-0.55vw) scale(1.03);
+    filter: drop-shadow(0 0.5vw 0.8vw rgba(0, 0, 0, 0.22));
+}
+
+.options_of_drink_base--first .drink_option:first-child,
+.options_of_drink_base--second .drink_option:first-child {
+    margin-left: 4.4vw;
+}
+
+.options_of_drink_base--first .drink_option:last-child,
+.options_of_drink_base--second .drink_option:last-child {
+    margin-left: 13.9vw;
+    margin-top: -6.2vw;
+}
+
+.drink_option img,
+.rack_base_drink {
+    display: block;
+    width: 26.2vw;
+    height: auto;
+}
+
+.rack_base_drink {
+    position: absolute;
+        top: 19vw;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.drag_sign {
+    display: block;
+    width: 5.6vw;
+    margin: 0.7vw 1vw 0 auto;
+}
+
+.create_drink_actions {
+    position: absolute;
+    left: 35.2vw;
+    bottom: 2vw;
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+    z-index: 4;
+    transform: none;
+}
+
+.again_button_create_drink,
+.done_button_create_drink {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.again_button_create_drink:hover,
+.done_button_create_drink:hover {
+    transform: scale(1.05);
+}
+
+.drink_option.is-dragging {
+    opacity: 0.38;
+    transform: scale(0.94);
+    filter: saturate(0.85);
+}
+
+.drink_option_drag_proxy {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 6.1vw;
+    pointer-events: none;
+    z-index: 999;
+    transform: translate(-50%, -50%) scale(1.08);
+    filter: drop-shadow(0 1vw 1.2vw rgba(0, 0, 0, 0.28));
+}
+
+.drink_option_drag_proxy img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@keyframes drink-item-drop {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-2.4vw) scale(0.72);
+    }
+
+    58% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0.5vw) scale(1.06);
+    }
+
+    78% {
+        transform: translateX(-50%) translateY(-0.2vw) scale(0.98);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0) scale(1);
+    }
+}
+
+@keyframes glass-update {
+    0% {
+        transform: scale(0.97);
+        opacity: 0.88;
+    }
+
+    60% {
+        transform: scale(1.02);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .create_drink {
+        min-height: auto;
+    }
+
+    .create_drink_inner {
+        min-height: auto;
+        padding: 8vw 5vw 20vw;
+    }
+
+    .grumpy_cloud {
+        position: relative;
+        display: block;
+        width: 48vw;
+        left: 0;
+        top: 0;
+    }
+
+    .create_drink_text {
+        position: relative;
+        left: 0;
+        bottom: auto;
+        width: 90vw;
+        margin-top: 4vw;
+    }
+
+    .create_drink_text_value {
+        font-size: 6vw;
+        white-space: normal;
+        width: 82%;
+    }
+
+    .drink {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 52vw;
+        margin: 8vw auto 0;
+        transform: none;
+    }
+
+    .drink_drop_zone {
+        top: 6vw;
+        width: 24vw;
+        height: 45vw;
+    }
+
+    .drink_options_area {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        margin-top: 8vw;
+    }
+
+    .drink_option {
+        width: 15vw;
+    }
+
+    .options_of_drink_base {
+        padding-bottom: 5vw;
+    }
+
+    .options_of_drink_base--first .drink_option:first-child,
+    .options_of_drink_base--second .drink_option:first-child {
+        margin-left: 8vw;
+    }
+
+    .options_of_drink_base--first .drink_option:last-child,
+    .options_of_drink_base--second .drink_option:last-child {
+        margin-left: 32vw;
+        margin-top: -15vw;
+    }
+
+    .drag_sign {
+        width: 12vw;
+        margin-top: 4vw;
+    }
+
+    .create_drink_actions {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        justify-content: flex-end;
+        margin-top: 8vw;
+        transform: none;
+    }
+
+    .glass_fill_item.item-base_1,
+    .glass_fill_item.item-base_2 {
+        width: 18vw;
+    }
+
+    .glass_fill_item.item-bake_drink_1,
+    .glass_fill_item.item-bake_drink_1_1 {
+        width: 9vw;
+    }
+}
+
+.victorina {
+    position: relative;
+    min-height: 62vw;
+    background-color: #312783;
+    overflow: hidden;
+}
+
+.victorina_inner {
+    position: relative;
+    min-height: 62vw;
+    padding: 4vw 6vw 7vw;
+}
+
+.victorina_main_character {
+    position: absolute;
+    left: 50%;
+    top: 15vw;
+    width: 20vw;
+    height: 20vw;
+    object-fit: contain;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.victorina_card {
+    position: absolute;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.victorina_card_cloud {
+    display: block;
+    width: 100%;
+    height: auto;
+    transform-origin: center center;
+    transition: transform 0.45s ease, opacity 0.35s ease;
+}
+
+.victorina_card_plaque {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 26vw;
+    transform: translate(-47%, -50%) scaleX(0.2);
+    transform-origin: left center;
+    opacity: 0;
+    transition: transform 0.45s ease, opacity 0.35s ease;
+}
+
+.victorina_card_plaque_image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.victorina_card_text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-family: "Proxima-Nova";
+    font-weight: 800;
+    font-size: 2.3vw;
+    line-height: 1;
+    color: #C3FB4F;
+    text-align: center;
+    padding: 0 2vw;
+}
+
+.victorina_card_question {
+    top: 4vw;
+    right: 8vw;
+    width: 18vw;
+}
+
+.victorina_card_answer_top {
+    top: 7vw;
+    left: 9vw;
+    width: 16vw;
+}
+
+.victorina_card_answer_middle {
+    left: 7vw;
+    bottom: 16vw;
+    width: 16.5vw;
+}
+
+.victorina_card_answer_bottom {
+    right: 12vw;
+    bottom: 10vw;
+    width: 16.2vw;
+}
+
+.victorina:not(.is-started) .victorina_card {
+    animation: victorina-sway 3.4s ease-in-out infinite;
+}
+
+.victorina:not(.is-started) .victorina_card_question {
+    animation-delay: -0.5s;
+}
+
+.victorina:not(.is-started) .victorina_card_answer_middle {
+    animation-delay: -1.2s;
+}
+
+.victorina:not(.is-started) .victorina_card_answer_bottom {
+    animation-delay: -1.8s;
+}
+
+.victorina.is-started .victorina_card_answer .victorina_card_cloud,
+.victorina.is-finished .victorina_card_answer .victorina_card_cloud,
+.victorina.is-started .victorina_card_question .victorina_card_cloud,
+.victorina.is-finished .victorina_card_question .victorina_card_cloud {
+    transform: scale(0.0001);
+    opacity: 0;
+}
+
+.victorina.is-started .victorina_card_answer .victorina_card_plaque,
+.victorina.is-finished .victorina_card_answer .victorina_card_plaque,
+.victorina.is-started .victorina_card_question .victorina_card_plaque,
+.victorina.is-finished .victorina_card_question .victorina_card_plaque {
+    transform: translate(-47%, -50%) scaleX(1);
+    opacity: 1;
+}
+
+.victorina.is-started .victorina_card_answer_top,
+.victorina.is-finished .victorina_card_answer_top {
+    left: 53vw;
+    top: 10vw;
+    width: 26vw;
+}
+
+.victorina.is-started .victorina_card_answer_middle,
+.victorina.is-finished .victorina_card_answer_middle {
+    left: 53vw;
+    top: 22vw;
+    width: 26vw;
+}
+
+.victorina.is-started .victorina_card_answer_bottom,
+.victorina.is-finished .victorina_card_answer_bottom {
+    left: 53vw;
+    top: 34vw;
+    width: 26vw;
+}
+
+.victorina.is-started .victorina_card_question,
+.victorina.is-finished .victorina_card_question {
+    top: 8vw;
+    left: 6vw;
+    right: auto;
+    width: 32vw;
+}
+
+.victorina_card.is-selected .victorina_card_plaque_image {
+    filter: drop-shadow(0 0 1vw rgba(195, 251, 79, 0.36));
+}
+
+.victorina_card.is-selected .victorina_card_text {
+    color: #fff;
+}
+
+.popup_victorina {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 101;
+}
+
+.popup_victorina.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup_victorina .popup-content {
+    width: 60vw;
+    text-align: center;
+    position: relative;
+}
+
+.popup_victorina .popup-img {
+    margin: 1vw;
+    object-fit: contain;
+    position: absolute;
+    left: -6vw;
+    top: -11vw;
+    z-index: -1;
+}
+
+.popup_victorina_title {
+    position: absolute;
+    top: 2vw;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+.popup_victorina_score {
+    position: absolute;
+    top: 8.5vw;
+    width: 100%;
+    margin: 0;
+    font-family: 'Proxima Nova';
+    font-weight: 700;
+    font-size: 2vw;
+    line-height: 1.1;
+    color: #C3FB4F;
+    text-align: center;
+}
+
+.button_start_again_victorina {
+    gap: 1vw;
+    margin-top: 12.5vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.button_start_again_victorina h3 {
+    margin-top: 1vw;
+}
+
+.again_popup_button_victorina,
+.close_popup_button_victorina {
+    background: transparent;
+    border: none;
+}
+
+.close_popup_button_victorina {
+    left: 51vw;
+    top: -0.5vw;
+    position: absolute;
+}
+
+@keyframes victorina-sway {
+    0%,
+    100% {
+        transform: rotate(-3deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(3deg) translateY(-0.6vw);
+    }
+}
+
+@media (max-width: 768px) {
+    .victorina {
+        min-height: auto;
+    }
+
+    .victorina_inner {
+        min-height: auto;
+        padding: 8vw 5vw 16vw;
+    }
+
+    .victorina_main_character {
+        position: relative;
+        top: auto;
+        left: auto;
+        display: block;
+        width: 42vw;
+        height: 42vw;
+        margin: 0 auto 10vw;
+        transform: none;
+    }
+
+    .victorina_card,
+    .victorina.is-started .victorina_card,
+    .victorina.is-finished .victorina_card {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        width: 100%;
+        margin-bottom: 5vw;
+    }
+
+    .victorina_card_plaque,
+    .victorina.is-started .victorina_card_plaque,
+    .victorina.is-finished .victorina_card_plaque {
+        width: 84vw;
+    }
+
+    .victorina_card_text {
+        font-size: 6vw;
+        padding: 0 8vw;
+    }
+
+    .popup_victorina .popup-content {
+        width: 82vw;
+    }
+
+    .popup_victorina_score {
+        top: 20vw;
+        font-size: 4.8vw;
+        padding: 0 4vw;
+    }
+
+    .button_start_again_victorina {
+        margin-top: 28vw;
+    }
+
+    .close_popup_button_victorina {
+        left: auto;
+        right: 3vw;
+        top: 1vw;
+    }
 }
