@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   document.addEventListener('DOMContentLoaded', () => {
-    // ----- Элементы DOM -----
     const eyesImg = document.querySelector('.eyes-img');
     const formImg = document.querySelector('.form-img');
     const bodyImg = document.querySelector('.body-img');
@@ -20,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const closePopupBtn = document.querySelector('.close_popup_button_create_char');
     const startAgainPopupBtn = document.querySelector('.again_popup_button_create_char');
 
-    // ----- Массивы изображений (в порядке от first до fourth) -----
     const eyesImages = [
         'eyes_first.svg',
         'eyes_second.svg',
@@ -40,42 +38,38 @@ document.addEventListener('DOMContentLoaded', () => {
         'body_fourth.svg'
     ];
 
-    // ----- Текущие индексы (0 = first) -----
+    
     let eyesIndex = 0;
     let formIndex = 0;
     let bodyIndex = 0;
 
-    // ----- Функция обновления основного изображения -----
+    
     function updateMainCharacter() {
-        // Формируем имя файла: eyesNum_formNum_bodyNum_variant.svg
-        // Например: 1_1_1_variant.svg, 2_3_4_variant.svg
         const filename = `${eyesIndex+1}_${formIndex+1}_${bodyIndex+1}_variant.svg`;
         mainChar.src = 'images/' + filename;
-        // Для отладки можно вывести в консоль
         console.log('Updated main character:', filename);
     }
 
-    // ----- Функция обновления изображений слайдеров -----
+    
     function updateSliders() {
         eyesImg.src = 'images/' + eyesImages[eyesIndex];
         formImg.src = 'images/' + formImages[formIndex];
         bodyImg.src = 'images/' + bodyImages[bodyIndex];
     }
 
-    // ----- Сброс всех значений на first -----
+    
     function resetToDefault() {
         eyesIndex = 0;
         formIndex = 0;
         bodyIndex = 0;
         updateSliders();
         updateMainCharacter();
-        // Если попап открыт, закрываем его
         if (popup.classList.contains('active')) {
             popup.classList.remove('active');
         }
     }
 
-    // ----- Изменение значения слайдера -----
+    
     function changeSlider(sliderType, delta) {
         switch(sliderType) {
             case 'eyes':
@@ -96,8 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateMainCharacter();
     }
 
-    // ----- Обработчики событий для кнопок слайдеров -----
-    // Используем делегирование, так как кнопок несколько
+    
     document.querySelectorAll('.left-btn, .right-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.stopPropagation();
@@ -107,36 +100,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ----- Кнопка Again (сброс) -----
+    
     againBtn.addEventListener('click', resetToDefault);
 
-    // ----- Кнопка Win (показ попапа) -----
     winBtn.addEventListener('click', () => {
         popup.classList.add('active');
     });
 
-    // ----- Закрытие попапа по крестику -----
     closePopupBtn.addEventListener('click', () => {
         popup.classList.remove('active');
     });
 
-    // ----- Кнопка Start Again внутри попапа (сброс и закрытие) -----
     startAgainPopupBtn.addEventListener('click', () => {
         resetToDefault();
-        // попап уже закрыт внутри resetToDefault, но если нет — закроем явно
         if (popup.classList.contains('active')) {
             popup.classList.remove('active');
         }
     });
 
-    // ----- Закрытие попапа при клике на фон (опционально) -----
     popup.addEventListener('click', (e) => {
         if (e.target === popup) {
             popup.classList.remove('active');
         }
     });
 
-    // Инициализация начальных состояний
     updateSliders();
     updateMainCharacter();
 });
@@ -144,17 +131,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    // ---------- Логика для первых четырёх карточек ----------
     const cards = document.querySelectorAll('.phrase-card:not(.trigger-card)');
     cards.forEach(card => {
         card.addEventListener('click', (e) => {
             e.stopPropagation();
             const cloud = card.querySelector('.friend-cloud');
             if (!cloud) return;
-            // Показываем облако
             cloud.classList.remove('hidden');
             cloud.classList.add('visible');
-            // Через 3 секунды скрываем
             setTimeout(() => {
                 cloud.classList.remove('visible');
                 cloud.classList.add('hidden');
@@ -162,32 +146,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ---------- Логика для пятого (триггерного) блока ----------
     const triggerCard = document.querySelector('.trigger-card');
     const victoryPopup = document.querySelector('.popup_searching_a_friend');
     const closePopupBtn = victoryPopup?.querySelector('.close_popup_button_searching_a_friend');
     const startAgainBtn = victoryPopup?.querySelector('.again_popup_button_searching_a_friend');
 
-    let timeoutId = null; // для таймера победы
+    let timeoutId = null; 
 
     if (triggerCard) {
         triggerCard.addEventListener('click', (e) => {
             e.stopPropagation();
-            // Показываем облако у триггера (если есть)
             const triggerCloud = triggerCard.querySelector('.friend-cloud');
             if (triggerCloud) {
                 triggerCloud.classList.remove('hidden');
                 triggerCloud.classList.add('visible');
-                // Облако скроется через 3 секунды (стандартно), но победа наступит через 5
                 setTimeout(() => {
                     triggerCloud.classList.remove('visible');
                     triggerCloud.classList.add('hidden');
                 }, 3000);
             }
 
-            // Если уже есть запущенный таймер – сбросим (чтобы не было двойной победы)
             if (timeoutId) clearTimeout(timeoutId);
-            // Через 5 секунд засчитываем победу
             timeoutId = setTimeout(() => {
                 if (victoryPopup) {
                     victoryPopup.classList.add('active');
@@ -197,15 +176,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ---------- Закрытие попапа и сброс состояния ----------
     function resetTrigger() {
         if (victoryPopup) victoryPopup.classList.remove('active');
-        // Сброс таймера, если попап закрыли вручную
         if (timeoutId) {
             clearTimeout(timeoutId);
             timeoutId = null;
         }
-        // Дополнительно: можно скрыть все облака на всякий случай
         document.querySelectorAll('.friend-cloud').forEach(cloud => {
             cloud.classList.remove('visible');
             cloud.classList.add('hidden');
@@ -218,13 +194,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (startAgainBtn) {
         startAgainBtn.addEventListener('click', resetTrigger);
     }
-    // Клик по фону попапа – тоже закрытие
     if (victoryPopup) {
         victoryPopup.addEventListener('click', (e) => {
             if (e.target === victoryPopup) resetTrigger();
         });
     }
 });
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const stopSection = document.querySelector('.game_stop');
     const trafficLight = document.querySelector('.traffic_lighter');
@@ -353,10 +330,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function resetStopPopupFlow() {
         victoryPopup.classList.remove('active');
-        resetStopGame();
+        if (!state.isWon) {
+            resetStopGame();
 
-        if (state.isVisible && !state.isWon) {
-            armIdleDetection();
+            if (state.isVisible) {
+                armIdleDetection();
+            }
         }
     }
 
@@ -384,9 +363,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const options = document.querySelectorAll('.drink_option');
     const againButton = document.querySelector('.again_button_create_drink');
     const confirmButton = document.querySelector('.done_button_create_drink');
-    const victoryPopup = document.querySelector('.popup_searching_a_friend');
-    const closePopupBtn = victoryPopup?.querySelector('.close_popup_button_searching_a_friend');
-    const startAgainBtn = victoryPopup?.querySelector('.again_popup_button_searching_a_friend');
+    const victoryPopup = document.querySelector('.popup_create_drink_victory');
+    const closePopupBtn = victoryPopup?.querySelector('.close_popup_button_create_drink_victory');
+    const startAgainBtn = victoryPopup?.querySelector('.again_popup_button_create_drink_victory');
 
     if (!drinkSection || !dialogueBox || !dialogueText || !dropZone || !glassImage || !options.length || !againButton || !confirmButton || !victoryPopup) {
         return;
@@ -682,8 +661,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const popupScore = document.querySelector('.popup_victorina_score');
     const popupClose = document.querySelector('.close_popup_button_victorina');
     const popupAgain = document.querySelector('.again_popup_button_victorina');
+    const questionCounter = document.querySelector('.victorina_question_counter_value');
 
-    if (!victorinaSection || !mainCharacter || !victorinaCharacter || !questionCard || answerCards.length !== 3 || !popup || !popupTitle || !popupScore || !popupClose || !popupAgain) {
+    if (!victorinaSection || !mainCharacter || !victorinaCharacter || !questionCard || answerCards.length !== 3 || !popup || !popupTitle || !popupScore || !popupClose || !popupAgain || !questionCounter) {
         return;
     }
 
@@ -695,12 +675,12 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             question: 'А ЕСЛИ Я НЕ ЗАХОЧУ ТЕБЯ КАТАТЬ?',
-            answers: ['БУДУ РУГАТЬСЯ С ТОБОЙ.', 'ПРОСТО СПОКОЙНО ОТРЕАГИРУЮ.', 'А С КАКИХ ПОР У ТЕБЯ ЕСТЬ ПРАВО НА ЭТО?'],
+            answers: ['БУДУ РУГАТЬСЯ С ТОБОЙ.', 'ПРОСТО СПОКОЙНО ОТРЕАГИРУЮ.', 'У ТЕБЯ НЕТ ПРАВ.'],
             correctIndex: 1
         },
         {
             question: 'МЫ ПОРУГАЛИСЬ. ТВОИ ДЕЙСТВИЯ?',
-            answers: ['БУДУ МОЛЧА ДУТЬСЯ НА ТЕБЯ.', 'НИЧЕГО НЕ СДЕЛАЮ. ИЗВИНЯЙСЯ ПЕРВЫМ', 'ПОДТОЛКНУ ТЕБЯ К СЕРЬЕЗНОМУ РАЗГОВОРУ.'],
+            answers: ['БУДУ МОЛЧА ДУТЬСЯ НА ТЕБЯ.', 'НИЧЕГО НЕ СДЕЛАЮ. ЗАЧЕМ?', 'СЕРЬЕЗНО ПОГОВОРЮ С ТОБОЙ.'],
             correctIndex: 2
         }
     ];
@@ -717,6 +697,10 @@ document.addEventListener('DOMContentLoaded', () => {
         victorinaCharacter.src = mainCharacter.getAttribute('src') || 'images/1_1_1_variant.svg';
     }
 
+    function updateQuestionCounter() {
+        questionCounter.textContent = (state.roundIndex + 1) + '/3';
+    }
+
     function setCardText(card, text) {
         const textNode = card.querySelector('.victorina_card_text');
         if (textNode) {
@@ -731,6 +715,7 @@ document.addEventListener('DOMContentLoaded', () => {
         state.correctAnswers = 0;
         state.isLocked = false;
         state.isFinished = false;
+        updateQuestionCounter();
 
         setCardText(questionCard, '?');
         answerCards.forEach(card => {
@@ -749,6 +734,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         victorinaSection.classList.add('is-started');
+        updateQuestionCounter();
         setCardText(questionCard, round.question);
 
         answerCards.forEach((card, index) => {
@@ -758,14 +744,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function showResultPopup() {
+        const scoreText = `?????????? ???????: ${state.correctAnswers} ?? 3`;
         popup.classList.add('active');
-        // const scoreText = `ТЫ ОТВЕТИЛ ПРАВИЛЬНО: ${state.correctAnswers} ИЗ 3 РАЗ`;
 
         if (state.correctAnswers === 3) {
-            popupTitle.textContent = 'ОБЩЕНИЕ ПРОЙДЕНО!';
+            popupTitle.textContent = '?????, ??????? ????????!';
             popupScore.textContent = scoreText;
         } else {
-            popupTitle.textContent = 'ТЫ НЕ УМЕЕШЬ ОБЩАТЬСЯ';
+            popupTitle.textContent = '?? ?? ?????? ????????';
             popupScore.textContent = scoreText;
         }
     }
@@ -833,7 +819,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     popupClose.addEventListener('click', () => {
-        popup.classList.remove('active');
+        setInitialVictorinaState();
     });
 
     popupAgain.addEventListener('click', () => {
@@ -842,10 +828,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
     popup.addEventListener('click', (event) => {
         if (event.target === popup) {
-            popup.classList.remove('active');
+            setInitialVictorinaState();
         }
     });
 
     setInitialVictorinaState();
+});
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (sessionStorage.getItem('resetToFirstScreen') === '1') {
+        sessionStorage.removeItem('resetToFirstScreen');
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
+    }
+
+    const restartAllButton = document.querySelector('.again_popup_last');
+    if (!restartAllButton) {
+        return;
+    }
+
+    restartAllButton.addEventListener('click', () => {
+        sessionStorage.setItem('resetToFirstScreen', '1');
+        window.location.reload();
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const phraseLetters = document.querySelectorAll('.scale_phrase_1 img, .scale_phrase_2 img');
+    if (!phraseLetters.length) {
+        return;
+    }
+
+    phraseLetters.forEach(letter => {
+        letter.addEventListener('mouseenter', () => {
+            letter.classList.add('is-stretched');
+        });
+
+        letter.addEventListener('mouseleave', () => {
+            letter.classList.remove('is-stretched');
+        });
+    });
 });
 

@@ -498,6 +498,18 @@ h3 {
     gap: 0.45vw;
     flex-direction: row;
 }
+
+.scale_phrase_1 img,
+.scale_phrase_2 img {
+    transform-origin: center bottom;
+    transition: transform 0.28s ease;
+    will-change: transform;
+}
+
+.scale_phrase_1 img.is-stretched,
+.scale_phrase_2 img.is-stretched {
+    transform: scaleY(1.28);
+}
 .scale_phrase_1 img:nth-of-type(2) {
     margin-top: 4vw;
     margin-left: -1vw;
@@ -699,19 +711,20 @@ h3 {
     background: transparent;
     position: absolute;
     border: none;
-    margin-left: 20vw;
-    margin-top: -20vw;
+    left: 51vw;
+    top: -0.5vw;
 }
 
 
 .popup_searching_a_friend .button_start_again_searching_a_friend {
-    margin-top: 122vw;
+    gap: 1vw;
+    margin-top: 12.5vw;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     background: transparent;
-    margin-left: 2vw;
+    margin-left: 0;
 }
 
 .popup_searching_a_friend .again_popup_button_searching_a_friend {
@@ -730,15 +743,17 @@ h3 {
     position: absolute;
     text-align: center;
     margin: 1vw 0;
-    top: 113vw;
+    top: 2vw;
     left: 13vw;
 }
 
 .popup_searching_a_friend .popup-img {
     z-index: -1;
     position: absolute;
-    margin-left: -35vw;
-    margin-top: 100vw;
+    left: -6vw;
+    top: -11vw;
+    margin-left: 0;
+    margin-top: 0;
     object-fit: contain;
 }
 
@@ -1218,104 +1233,6 @@ h3 {
     }
 }
 
-@media (max-width: 768px) {
-    .create_drink {
-        min-height: auto;
-    }
-
-    .create_drink_inner {
-        min-height: auto;
-        padding: 8vw 5vw 20vw;
-    }
-
-    .grumpy_cloud {
-        position: relative;
-        display: block;
-        width: 48vw;
-        left: 0;
-        top: 0;
-    }
-
-    .create_drink_text {
-        position: relative;
-        left: 0;
-        bottom: auto;
-        width: 90vw;
-        margin-top: 4vw;
-    }
-
-    .create_drink_text_value {
-        font-size: 6vw;
-        white-space: normal;
-        width: 82%;
-    }
-
-    .drink {
-        position: relative;
-        left: auto;
-        top: auto;
-        width: 52vw;
-        margin: 8vw auto 0;
-        transform: none;
-    }
-
-    .drink_drop_zone {
-        top: 6vw;
-        width: 24vw;
-        height: 45vw;
-    }
-
-    .drink_options_area {
-        position: relative;
-        top: auto;
-        right: auto;
-        width: 100%;
-        margin-top: 8vw;
-    }
-
-    .drink_option {
-        width: 15vw;
-    }
-
-    .options_of_drink_base {
-        padding-bottom: 5vw;
-    }
-
-    .options_of_drink_base--first .drink_option:first-child,
-    .options_of_drink_base--second .drink_option:first-child {
-        margin-left: 8vw;
-    }
-
-    .options_of_drink_base--first .drink_option:last-child,
-    .options_of_drink_base--second .drink_option:last-child {
-        margin-left: 32vw;
-        margin-top: -15vw;
-    }
-
-    .drag_sign {
-        width: 12vw;
-        margin-top: 4vw;
-    }
-
-    .create_drink_actions {
-        position: relative;
-        left: auto;
-        bottom: auto;
-        justify-content: flex-end;
-        margin-top: 8vw;
-        transform: none;
-    }
-
-    .glass_fill_item.item-base_1,
-    .glass_fill_item.item-base_2 {
-        width: 18vw;
-    }
-
-    .glass_fill_item.item-bake_drink_1,
-    .glass_fill_item.item-bake_drink_1_1 {
-        width: 9vw;
-    }
-}
 
 .victorina {
     position: relative;
@@ -1345,6 +1262,44 @@ h3 {
 .victorina.is-finished .victorina_main_character {
     left: 17vw;
     transform: translateX(0);
+}
+
+.victorina_question_counter {
+    position: absolute;
+    top: 7vw;
+    left: 37vw;
+    width: 9vw;
+    z-index: 3;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.92);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+.victorina.is-started .victorina_question_counter,
+.victorina.is-finished .victorina_question_counter {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.victorina_question_counter_bg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.victorina_question_counter_value {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Proxima-Nova";
+    font-weight: 800;
+    font-size: 2vw;
+    line-height: 1;
+    color: #312783;
 }
 
 .victorina_card {
@@ -1394,25 +1349,45 @@ h3 {
 }
 
 .victorina_card_plaque_image {
+    margin-left: -10vw;
     display: block;
     width: 44.21vw;
     height: auto;
 }
 
+
+.questionmark_1_cloud img {
+    margin-top: 10vw;
+}
+
+.questionmark_1_cloud h2 {
+    margin-top: 10vw;
+}
 .victorina_card_text {
     position: absolute;
     inset: 0;
     display: flex;
+    margin-left: -10vw;
     align-items: center;
     justify-content: center;
-    margin: 0;
     font-family: "Proxima-Nova";
-    font-weight: 800;
-    font-size: 2.3vw;
+    font-weight: 600;
+    width: 44vw;
+    font-size: 2.08vw;
     line-height: 1;
     color: #C3FB4F;
     text-align: center;
     padding: 0 2vw;
+}
+
+.victorina_card h2 {
+    text-align: left;
+    color: #312783;
+}
+
+.questionmark_4_cloud h2 {
+    margin-left: -8vw;
+    width: 41.66vw;
 }
 
 .victorina_card_question {
@@ -1620,6 +1595,125 @@ h3 {
     margin-left: 3vw;
 }
 
+.basement {
+    position: relative;
+    background-color: #312783;
+    padding: 1vw 0 1.5vw;
+}
+
+.basement > div {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+    width: max-content;
+    z-index: 2;
+}
+
+.basement p {
+    margin: 0;
+    font-family: "Proxima-Nova";
+    font-weight: 700;
+    font-size: 3vw;
+    line-height: 1;
+    color: #C3FB4F;
+    white-space: nowrap;
+}
+
+.basement > img {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 100vw;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.last_screen {
+    position: relative;
+    min-height: 34vw;
+    background-color: #312783;
+    overflow: hidden;
+}
+
+.last_screen > img {
+    position: absolute;
+    left: 50%;
+    bottom: 1.4vw;
+    width: 58vw;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.cloud_with_phrase_last {
+    position: absolute;
+    left: 24vw;
+    top: 4vw;
+    width: 8vw;
+    z-index: 3;
+}
+
+.cloud_with_phrase_last img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.cloud_with_phrase_last p {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Proxima-Nova";
+    font-weight: 800;
+    font-size: 4vw;
+    line-height: 1;
+    color: #312783;
+}
+
+.last_screen_restart {
+    position: absolute;
+    top: 4vw;
+    right: 3vw;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    gap: 0.55vw;
+    z-index: 4;
+}
+
+.last_screen_restart p {
+    margin: 0;
+    font-family: "Proxima-Nova";
+    font-weight: 700;
+    font-size: 3vw;
+    line-height: 1;
+    color: #C3FB4F;
+    white-space: nowrap;
+}
+
+.again_popup_last {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.again_popup_last:hover {
+    transform: scale(1.04);
+}
+
+.again_popup_last img {
+    display: block;
+    width: 6.15vw;
+    height: auto;
+}
 
 /* @media (max-width: 768px) {
     .victorina {

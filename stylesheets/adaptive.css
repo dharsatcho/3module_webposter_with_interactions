@@ -1,0 +1,936 @@
+@media screen and (max-width: 1440px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .container,
+    .wrapper {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .first_section {
+        height: 46.5vw;
+    }
+
+    .first_section_second_sost > img {
+        left: 85.26vw;
+        width: 117vw;
+    }
+
+    .first_section_overlay_button {
+        top: 18.2vw;
+        left: 85.26vw;
+    }
+
+    .moving-image.moved {
+        left: -14.8vw;
+    }
+
+    .first_section_overlay_button.moved {
+        left: -14.74vw;
+    }
+
+    .create_character {
+        height: 61vw;
+    }
+
+    .left_slider {
+        left: 4vw;
+        top: 2vw;
+    }
+
+    .slider-option {
+        width: 53vw;
+        height: 12.5vw;
+    }
+
+    .slider_bg {
+        width: 50vw;
+        left: 1vw;
+        top: 6vw;
+    }
+
+    .main-character-img {
+        left: 62vw;
+        top: 16vw;
+        width: 26vw;
+        height: 26vw;
+    }
+
+    .again_button_create_char,
+    .win_button_create_char {
+        top: 49vw;
+    }
+
+    .again_button_create_char {
+        right: 13vw;
+    }
+
+    .win_button_create_char {
+        right: 5vw;
+        top: 50vw;
+    }
+
+    .popup_create_char .popup-content,
+    .popup_searching_a_friend .popup-content,
+    .popup_victorina .popup-content {
+        width: 68vw;
+    }
+
+    .popup_create_char .popup-img,
+    .popup_searching_a_friend .popup-img,
+    .popup_victorina .popup-img {
+        width: 80vw;
+        left: -6vw;
+        top: -11vw;
+    }
+
+    .popup_create_char .popup-content h1,
+    .popup_searching_a_friend h1,
+    .popup_victorina_title {
+        top: 2.8vw;
+        font-size: 4.6vw;
+    }
+
+    .popup_create_char .popup-content h1 {
+        left: 17vw;
+        width: 34vw;
+    }
+
+    .popup_searching_a_friend h1 {
+        left: 14vw;
+        width: 38vw;
+    }
+
+    .popup_victorina_title {
+        left: 50%;
+        width: 60%;
+        transform: translateX(-50%);
+    }
+
+    .popup_victorina_score {
+        top: 8.9vw;
+        font-size: 2.2vw;
+        padding: 0 7vw;
+    }
+
+    .button_start_again_char,
+    .popup_searching_a_friend .button_start_again_searching_a_friend,
+    .button_start_again_victorina {
+        gap: 1.2vw;
+        margin-top: 14.6vw;
+    }
+
+    .close_popup_button_create_char,
+    .close_popup_button_searching_a_friend,
+    .close_popup_button_victorina {
+        left: auto;
+        right: 4vw;
+        top: 0.6vw;
+    }
+
+    .scale_phrase_1 div,
+    .scale_phrase_2 div {
+        justify-content: center;
+        gap: 0.35vw;
+        padding: 0 1vw;
+    }
+
+    .searching_a_friend {
+        height: 54vw;
+    }
+
+    .phrase-container {
+        position: relative;
+        width: 100%;
+        min-height: 54vw;
+    }
+
+    .first_cloud_friend {
+        left: 1vw;
+        top: 1.5vw;
+        margin-top: 0;
+    }
+
+    .second_cloud_friend {
+        left: 7vw;
+        top: 27vw;
+        margin-top: 0;
+    }
+
+    .third_cloud_friend {
+        right: 2vw;
+        top: 4vw;
+        margin-top: 0;
+    }
+
+    .fourth_cloud_friend {
+        right: 10vw;
+        top: 28vw;
+        margin-top: 0;
+    }
+
+    .main_cloud_friend {
+        left: 32vw;
+        top: 12vw;
+        margin-top: 0;
+    }
+
+    .friend-cloud {
+        top: -8vw;
+        width: 15vw;
+        max-width: none;
+        padding: 0.8vw 1vw;
+    }
+
+    .game_stop {
+        height: 53vw;
+    }
+
+    .game_stop_inner {
+        min-height: 53vw;
+        padding: 7vw 4vw 5vw;
+    }
+
+    .stop_sign {
+        top: 1vw;
+        left: 31vw;
+        width: 38vw;
+    }
+
+    .stop_sign_title {
+        top: 7vw;
+    }
+
+    .traffic_lighter {
+        top: 18vw;
+        right: -1vw;
+        width: 64vw;
+    }
+
+    .traffic_light_bulb {
+        width: 14vw;
+        height: 14vw;
+    }
+
+    .decor_game_stop {
+        width: 100vw;
+        height: 53vw;
+    }
+
+    .create_drink {
+        min-height: 60vw;
+    }
+
+    .create_drink_inner {
+        min-height: 60vw;
+        padding: 4vw 3vw 5vw;
+    }
+
+    .grumpy_cloud {
+        left: 2vw;
+        top: 13vw;
+        width: 31vw;
+    }
+
+    .create_drink_text {
+        left: 2vw;
+        bottom: 3.2vw;
+        width: 72vw;
+    }
+
+    .create_drink_text_value {
+        width: 88%;
+        font-size: 3.2vw;
+    }
+
+    .drink {
+        top: 6vw;
+        width: 24vw;
+        transform: translateX(-50%);
+    }
+
+    .empty_glass {
+        width: 16vw;
+        margin-left: 4.6vw;
+        margin-top: 2.2vw;
+    }
+
+    .rack {
+        width: 20vw;
+        margin: -7.8vw 3.5vw 0;
+    }
+
+    .drink_drop_zone {
+        top: 2.5vw;
+        width: 10.5vw;
+        height: 22vw;
+    }
+
+    .drink_options_area {
+        top: 8.5vw;
+        right: 4vw;
+        width: 29vw;
+        gap: 3vw;
+    }
+
+    .options_of_drink_base {
+        height: 10.8vw;
+    }
+
+    .options_of_drink_base--first .drink_option:first-child,
+    .options_of_drink_base--second .drink_option:first-child {
+        left: 3.6vw;
+        top: 0.4vw;
+    }
+
+    .options_of_drink_base--first .drink_option:last-child,
+    .options_of_drink_base--second .drink_option:last-child {
+        left: 14.6vw;
+        top: 0.3vw;
+    }
+
+    .options_of_drink_base--first .drink_option img,
+    .options_of_drink_base--second .drink_option img {
+        width: 8.2vw;
+    }
+
+    .rack_base_drink {
+        width: 27vw;
+        left: 0.7vw;
+        top: 4vw;
+    }
+
+    .drag_sign {
+        position: relative;
+        align-self: flex-end;
+        width: 5.8vw;
+        margin-top: 0.5vw;
+        margin-right: 0.4vw;
+    }
+
+    .create_drink_actions {
+        right: 4vw;
+        bottom: 3vw;
+        gap: 1.4vw;
+    }
+
+    .again_button_create_drink,
+    .done_button_create_drink {
+        position: static;
+        margin: 0;
+    }
+
+    .drink_option_drag_proxy {
+        width: 6.6vw;
+    }
+
+    .victorina {
+        height: 60vw;
+    }
+
+    .victorina_inner {
+        min-height: 60vw;
+        padding: 4vw 5vw 6vw;
+    }
+
+    .victorina_main_character {
+        width: 28vw;
+        top: 17vw;
+    }
+
+    .victorina.is-started .victorina_main_character,
+    .victorina.is-finished .victorina_main_character {
+        left: 15vw;
+    }
+
+    .victorina_question_counter {
+        top: 7.5vw;
+        left: 37vw;
+        width: 9.5vw;
+    }
+
+    .victorina_card_question {
+        top: 5vw;
+        right: 7vw;
+        width: 19vw;
+    }
+
+    .victorina_card_answer_top {
+        top: 7vw;
+        left: 8vw;
+        width: 17vw;
+    }
+
+    .victorina_card_answer_middle {
+        left: 6vw;
+        bottom: 16vw;
+        width: 17vw;
+    }
+
+    .victorina_card_answer_bottom {
+        right: 10vw;
+        bottom: 10vw;
+        width: 17vw;
+    }
+
+    .victorina.is-started .victorina_card_question,
+    .victorina.is-finished .victorina_card_question {
+        left: 56vw;
+        top: 7vw;
+        width: 34vw;
+    }
+
+    .victorina.is-started .victorina_card_answer_top,
+    .victorina.is-finished .victorina_card_answer_top {
+        left: 56vw;
+        top: 20vw;
+        width: 28vw;
+    }
+
+    .victorina.is-started .victorina_card_answer_middle,
+    .victorina.is-finished .victorina_card_answer_middle {
+        left: 56vw;
+        top: 31.5vw;
+        width: 28vw;
+    }
+
+    .victorina.is-started .victorina_card_answer_bottom,
+    .victorina.is-finished .victorina_card_answer_bottom {
+        left: 56vw;
+        top: 43vw;
+        width: 28vw;
+    }
+
+    .victorina_card_plaque {
+        width: 27vw;
+    }
+
+    .victorina_card_plaque_image {
+        width: 43vw;
+        margin-left: -9vw;
+    }
+
+    .victorina_card_text {
+        width: 43vw;
+        margin-left: -9vw;
+        font-size: 2vw;
+    }
+
+    .scale_phrase_2 div {
+        justify-content: center;
+        gap: 0.45vw;
+        padding: 0 1vw;
+    }
+
+    .last_screen {
+        min-height: 38vw;
+    }
+
+    .last_screen > img {
+        width: 61vw;
+        bottom: 1.8vw;
+    }
+
+    .cloud_with_phrase_last {
+        left: 26vw;
+        top: 5vw;
+        width: 9vw;
+    }
+
+    .cloud_with_phrase_last p {
+        font-size: 4vw;
+    }
+
+    .last_screen_restart {
+        top: 5vw;
+        right: 4vw;
+        gap: 0.8vw;
+    }
+
+    .again_popup_last img {
+        width: 8vw;
+    }
+
+    .basement {
+        padding: 1.4vw 0 2vw;
+    }
+
+    .basement > div {
+        gap: 2.2vw;
+    }
+
+    .basement p {
+        font-size: 2.1vw;
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .container,
+    .wrapper {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .first_section {
+        height: 46.5vw;
+    }
+
+    .first_section_second_sost>img {
+        left: 85.26vw;
+        width: 117vw;
+    }
+
+    .first_section_overlay_button {
+        top: 18.2vw;
+        left: 85.26vw;
+    }
+
+    .moving-image.moved {
+        left: -14.8vw;
+    }
+
+    .first_section_overlay_button.moved {
+        left: -14.74vw;
+    }
+
+    .create_character {
+        height: 61vw;
+    }
+
+    .left_slider {
+        left: 4vw;
+        top: 2vw;
+    }
+
+    .slider-option {
+        width: 53vw;
+        height: 12.5vw;
+    }
+
+    .slider_bg {
+        width: 50vw;
+        left: 1vw;
+        top: 6vw;
+    }
+
+    .main-character-img {
+        left: 62vw;
+        top: 16vw;
+        width: 26vw;
+        height: 26vw;
+    }
+
+    .again_button_create_char,
+    .win_button_create_char {
+        top: 49vw;
+    }
+
+    .again_button_create_char {
+        right: 13vw;
+    }
+
+    .win_button_create_char {
+        right: 5vw;
+        top: 50vw;
+    }
+
+    .popup_create_char .popup-content,
+    .popup_searching_a_friend .popup-content,
+    .popup_victorina .popup-content {
+        width: 68vw;
+    }
+
+    .popup_create_char .popup-img,
+    .popup_searching_a_friend .popup-img,
+    .popup_victorina .popup-img {
+        width: 80vw;
+        left: -6vw;
+        top: -11vw;
+    }
+
+    .popup_create_char .popup-content h1,
+    .popup_searching_a_friend h1,
+    .popup_victorina_title {
+        top: 2.8vw;
+        font-size: 4.6vw;
+    }
+
+    .popup_create_char .popup-content h1 {
+        left: 17vw;
+        width: 34vw;
+    }
+
+    .popup_searching_a_friend h1 {
+        left: 14vw;
+        width: 38vw;
+    }
+
+    .popup_victorina_title {
+        left: 50%;
+        width: 60%;
+        transform: translateX(-50%);
+    }
+
+    .popup_victorina_score {
+        top: 8.9vw;
+        font-size: 2.2vw;
+        padding: 0 7vw;
+    }
+
+    .button_start_again_char,
+    .popup_searching_a_friend .button_start_again_searching_a_friend,
+    .button_start_again_victorina {
+        gap: 1.2vw;
+        margin-top: 14.6vw;
+    }
+
+    .close_popup_button_create_char,
+    .close_popup_button_searching_a_friend,
+    .close_popup_button_victorina {
+        left: auto;
+        right: 4vw;
+        top: 0.6vw;
+    }
+
+    .scale_phrase_1 div,
+    .scale_phrase_2 div {
+        justify-content: center;
+        gap: 0.35vw;
+        padding: 0 1vw;
+    }
+
+    .searching_a_friend {
+        height: 54vw;
+    }
+
+    .phrase-container {
+        position: relative;
+        width: 100%;
+        min-height: 54vw;
+    }
+
+    .first_cloud_friend {
+        left: 1vw;
+        top: 1.5vw;
+        margin-top: 0;
+    }
+
+    .second_cloud_friend {
+        left: 7vw;
+        top: 27vw;
+        margin-top: 0;
+    }
+
+    .third_cloud_friend {
+        right: 2vw;
+        top: 4vw;
+        margin-top: 0;
+    }
+
+    .fourth_cloud_friend {
+        right: 10vw;
+        top: 28vw;
+        margin-top: 0;
+    }
+
+    .main_cloud_friend {
+        left: 32vw;
+        top: 12vw;
+        margin-top: 0;
+    }
+
+    .friend-cloud {
+        top: -8vw;
+        width: 15vw;
+        max-width: none;
+        padding: 0.8vw 1vw;
+    }
+
+    .game_stop {
+        height: 53vw;
+    }
+
+    .game_stop_inner {
+        min-height: 53vw;
+        padding: 7vw 4vw 5vw;
+    }
+
+    .stop_sign {
+        top: 1vw;
+        left: 31vw;
+        width: 38vw;
+    }
+
+    .stop_sign_title {
+        top: 7vw;
+    }
+
+    .traffic_lighter {
+        top: 18vw;
+        right: -1vw;
+        width: 64vw;
+    }
+
+    .traffic_light_bulb {
+        width: 14vw;
+        height: 14vw;
+    }
+
+    .decor_game_stop {
+        width: 100vw;
+        height: 53vw;
+    }
+
+    .create_drink {
+        min-height: 60vw;
+    }
+
+    .create_drink_inner {
+        min-height: 60vw;
+        padding: 4vw 3vw 5vw;
+    }
+
+    .grumpy_cloud {
+        left: 2vw;
+        top: 13vw;
+        width: 31vw;
+    }
+
+    .create_drink_text {
+        left: 2vw;
+        bottom: 3.2vw;
+        width: 72vw;
+    }
+
+    .create_drink_text_value {
+        width: 88%;
+        font-size: 3.2vw;
+    }
+
+    .drink {
+        top: 6vw;
+        width: 24vw;
+        transform: translateX(-50%);
+    }
+
+    .empty_glass {
+        width: 16vw;
+        margin-left: 4.6vw;
+        margin-top: 2.2vw;
+    }
+
+    .rack {
+        width: 20vw;
+        margin: -7.8vw 3.5vw 0;
+    }
+
+    .drink_drop_zone {
+        top: 2.5vw;
+        width: 10.5vw;
+        height: 22vw;
+    }
+
+    .drink_options_area {
+        top: 8.5vw;
+        right: 4vw;
+        width: 29vw;
+        gap: 3vw;
+    }
+
+    .options_of_drink_base {
+        height: 10.8vw;
+    }
+
+    .options_of_drink_base--first .drink_option:first-child,
+    .options_of_drink_base--second .drink_option:first-child {
+        left: 3.6vw;
+        top: 0.4vw;
+    }
+
+    .options_of_drink_base--first .drink_option:last-child,
+    .options_of_drink_base--second .drink_option:last-child {
+        left: 14.6vw;
+        top: 0.3vw;
+    }
+
+    .options_of_drink_base--first .drink_option img,
+    .options_of_drink_base--second .drink_option img {
+        width: 8.2vw;
+    }
+
+    .rack_base_drink {
+        width: 27vw;
+        left: 0.7vw;
+        top: 4vw;
+    }
+
+    .drag_sign {
+        position: relative;
+        align-self: flex-end;
+        width: 5.8vw;
+        margin-top: 0.5vw;
+        margin-right: 0.4vw;
+    }
+
+    .create_drink_actions {
+        right: 4vw;
+        bottom: 3vw;
+        gap: 1.4vw;
+    }
+
+    .again_button_create_drink,
+    .done_button_create_drink {
+        position: static;
+        margin: 0;
+    }
+
+    .drink_option_drag_proxy {
+        width: 6.6vw;
+    }
+
+    .victorina {
+        height: 60vw;
+    }
+
+    .victorina_inner {
+        min-height: 60vw;
+        padding: 4vw 5vw 6vw;
+    }
+
+    .victorina_main_character {
+        width: 28vw;
+        top: 17vw;
+    }
+
+    .victorina.is-started .victorina_main_character,
+    .victorina.is-finished .victorina_main_character {
+        left: 15vw;
+    }
+
+    .victorina_question_counter {
+        top: 7.5vw;
+        left: 37vw;
+        width: 9.5vw;
+    }
+
+    .victorina_card_question {
+        top: 5vw;
+        right: 7vw;
+        width: 19vw;
+    }
+
+    .victorina_card_answer_top {
+        top: 7vw;
+        left: 8vw;
+        width: 17vw;
+    }
+
+    .victorina_card_answer_middle {
+        left: 6vw;
+        bottom: 16vw;
+        width: 17vw;
+    }
+
+    .victorina_card_answer_bottom {
+        right: 10vw;
+        bottom: 10vw;
+        width: 17vw;
+    }
+
+    .victorina.is-started .victorina_card_question,
+    .victorina.is-finished .victorina_card_question {
+        left: 56vw;
+        top: 7vw;
+        width: 34vw;
+    }
+
+    .victorina.is-started .victorina_card_answer_top,
+    .victorina.is-finished .victorina_card_answer_top {
+        left: 56vw;
+        top: 20vw;
+        width: 28vw;
+    }
+
+    .victorina.is-started .victorina_card_answer_middle,
+    .victorina.is-finished .victorina_card_answer_middle {
+        left: 56vw;
+        top: 31.5vw;
+        width: 28vw;
+    }
+
+    .victorina.is-started .victorina_card_answer_bottom,
+    .victorina.is-finished .victorina_card_answer_bottom {
+        left: 56vw;
+        top: 43vw;
+        width: 28vw;
+    }
+
+    .victorina_card_plaque {
+        width: 27vw;
+    }
+
+    .victorina_card_plaque_image {
+        width: 43vw;
+        margin-left: -9vw;
+    }
+
+    .victorina_card_text {
+        width: 43vw;
+        margin-left: -9vw;
+        font-size: 2vw;
+    }
+
+    .scale_phrase_2 div {
+        justify-content: center;
+        gap: 0.45vw;
+        padding: 0 1vw;
+    }
+
+    .last_screen {
+        min-height: 38vw;
+    }
+
+    .last_screen>img {
+        width: 61vw;
+        bottom: 1.8vw;
+    }
+
+    .cloud_with_phrase_last {
+        left: 26vw;
+        top: 5vw;
+        width: 9vw;
+    }
+
+    .cloud_with_phrase_last p {
+        font-size: 4vw;
+    }
+
+    .last_screen_restart {
+        top: 5vw;
+        right: 4vw;
+        gap: 0.8vw;
+    }
+
+    .again_popup_last img {
+        width: 8vw;
+    }
+
+    .basement {
+        padding: 1.4vw 0 2vw;
+    }
+
+    .basement>div {
+        gap: 2.2vw;
+    }
+
+    .basement p {
+        font-size: 2.1vw;
+    }
+}
